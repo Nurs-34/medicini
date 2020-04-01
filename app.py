@@ -14,6 +14,15 @@ def recomendation():
 def recforchild():
     return render_template("recforchild.html")
 
-@app.route("/list")
+@app.route("/lst")
 def lst():
-    return render_template("list.html")
+    return render_template("lst.html")
+
+app.route("/proverka")
+def proverka():
+    return render_template("proverka.html")
+    # не могу сделать наследование для проверки.хтмл
+
+@app.route("/ManorChild/<name>")
+def ManorChild(name):
+    return render_template("manorchild.html", name=name)

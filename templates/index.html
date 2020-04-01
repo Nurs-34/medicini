@@ -7,13 +7,19 @@
     <title>мед сайт</title>
 </head>
 <body>
-    
+    {% block nav %}
 <div>
 главная
-<a href="list.html">Список лекарств</a>
-<a href="recomendation.html">Рекомендации</a>
-<a href="recforchild.html">Для детей</a>
+<a href="{{ url_for('lst') }}">Список лекарств</a>
+<a href="{{ url_for('recomendation') }}">Рекомендации</a>
+<a href="{{ url_for('recforchild') }}">Для детей</a>
 </div>
+    {% endblock %}
+
+
+    {% block content %}
+    random text
+    {% endblock %}
 
 </body>
 </html>

@@ -1,0 +1,9 @@
+{% extends 'index.html'%}
+
+{% block page%}
+    {% if name == 'child' %}
+    можно давать только парацетамол и антигриппин
+    {% esle %}
+    можно принимать любые лекарства
+    {% endif%}
+{% endblock%}
